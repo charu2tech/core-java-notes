@@ -1,0 +1,1 @@
+1) On a typical VM, each object takes around 12–byte header per object

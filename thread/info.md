@@ -1,0 +1,1 @@
+lock, race condition, inconsistencies in the data strucutre, bugs, crashes, unexpected behavior.
