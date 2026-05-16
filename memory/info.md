@@ -1,1 +1,3 @@
-1) On a typical VM, each object takes around 12–byte header per object
+1) On a typical VM, each object takes around 12–byte header per object. <br>
+2) On-heap memory is memory in the Java heap, which is a region of memory managed by the garbage collector. Java objects reside in the heap. The heap can grow or shrink while the application runs. When the heap becomes full, garbage collection is performed: The JVM identifies the objects that are no longer being used (unreachable objects) and recycles their memory, making space for new allocations. <br>
+3) Heap segment: This is a memory segment backed by a region of memory inside the Java heap, an on-heap region.<br>
