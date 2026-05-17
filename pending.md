@@ -8,3 +8,4 @@
 7) https://docs.oracle.com/en/java/javase/26/core/structured-concurrency.html#GUID-AA992944-AABA-4CBC-8039-DE5E17DE86DB
 8) https://docs.oracle.com/en/java/javase/26/core/stream-gatherers.html
 9) https://docs.oracle.com/en/java/javase/26/core/lazy-constants.html
+10) https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/lang/Record.html

@@ -16,5 +16,15 @@
    a) var must be initialized. <br>
    b) var must be a local variable. <br>
    c) var cannot be used for fields, nor for method or constructor parameters. <br>
+5) what is Enum? <br>
+   a) Enums are classes where all instances are known to the compiler. They are used for creating types that can only have few possible values. <br>
+   example: <br>
+   public enum DayOfWeek { <br>
+    // enum constants are listed here: <br>
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY <br>
+   } <br>
+   b) we can use enum constants in switch expressions.  <br>
+   c) special methods - name, ordinal, values, valueOf <br>
+
 
     
