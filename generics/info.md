@@ -61,3 +61,63 @@ Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8); <br>
 Pair<String, String>  p2 = new OrderedPair<String, String>("hello", "world"); <br>
 
 OrderedPair<String, Box<Integer>> p = new OrderedPair<>("primes", new Box<Integer>(...)); <br>
+
+6) Raw type  <br>
+public class Box<T> { <br>
+    public void set(T t) { /* ... */ } <br>
+    // ... <br>
+}  <br>
+
+7) Generic Methods <br>
+Generic methods are methods that introduce their own type parameters. This is similar to declaring a generic type, but the type parameter's scope is limited to the method where it is declared. Static and non-static generic methods are allowed, as well as generic class constructors. <br>
+ eg1: static methods <br>
+ public static <K, V> boolean compare(Pair<K, V> p1, Pair<K, V> p2)  <br>
+
+ eg2; non static methods <br>
+ public class Pair<K, V> { <br>
+
+    private K key; <br>
+    private V value; <br>
+    public K getKey()   { return key; } <br>
+    public V getValue() { return value; } <br>
+} <br>
+
+8) Bounded type parameter <br>
+eg1:  public <U extends Number> void inspect(U u) <br>
+eg2:  public class NaturalNumber<T extends Integer> { <br>
+
+9)  Box<Integer> is not a subtype of Box<Number> even though Integer is a subtype of Number. <br>
+
+10) Upper Bounded Wildcards <br>
+eg: List<? extends Number> <br>
+
+11) Unbounded Wildcards <br>
+List<?>   <br>
+It is generally useful if we pass Object <br>
+
+12) Lower Bounded Wildcards <br>
+<? super A> <br>
+
+13) super/sub types <br>
+class A { /* ... */ } <br>
+class B extends A { /* ... */ } <br>
+
+B b = new B(); <br>
+A a = b; <br>
+
+This example shows that inheritance of regular classes follows this rule of subtyping: class B is a subtype of class A if B extends A. This rule does not apply to generic types <br>
+
+List<B> lb = new ArrayList<>(); <br>
+List<A> la = lb;   // compile-time error <br>
+
+14) Erasure of Generic Types  <br>
+Generics were introduced to the Java language to provide tighter type checks at compile time and to support generic programming.  <br>
+Type erasure ensures that no new classes are created for parameterized types; consequently, generics incur no runtime overhead.  <br>
+
+During the type erasure process, the Java compiler erases all type parameters and replaces each with its first bound if the type parameter is bounded, or Object if the type parameter is unbounded.  <br>
+ 
+
+
+
+
+
